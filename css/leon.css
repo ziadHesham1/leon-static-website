@@ -54,16 +54,33 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
 .header .h_logo {
     width: 60px;
-
 }
 
 .header .h_links {
     position: relative;
+}
+
+.header .h_links .h_icon {
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:column ;
+    justify-content: flex-end;
+}
+.header .h_links .h_icon span {
+    background-color: #333;
+    margin-bottom: 5px;
+    height: 3px;
+
+}
+
+.header .h_links .h_icon span :first-child {
+    width: 60%;
+
 }
 
 

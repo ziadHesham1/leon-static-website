@@ -1,35 +1,38 @@
-<!--
 <style>
-    .h_icon {
-        background-color: yellow;
-        border: blue solid 3px;
-        width: 130px;
-        height: 150px;
-
-    }
-
-   .h_icon span {
-        width: 30px;
-        height: 3px;
+    .parent {
+        position: relative;
+        width: 600px;
+        height: 200px;
         display: flex;
-        flex-wrap: wrap;
-        background-color: #333;
+        justify-content: space-between;
+        background-color: #eeb674;
+    }
+
+    .parent .h_icon span {
+        display: flex;
+        flex-direction: column;
+        height: 30px;
+        width: 80px;
+        justify-content: space-around;
         margin-bottom: 5px;
+        background-color: #333;
+
     }
 
-    span :first-child {
-        width: 100%;
+   .parent span:first-child {
     }
 
-    span :nth-child(2) {
-        width: 60%;
+   .parent span:nth-child(2) {
     }
 
-    span :last-child {
-        width: 100%;
+   .parent span:last-child {
     }
 </style>
-<span class="h_icon">
+<div class="parent">
+    <h1>hi</h1>
+    <span class="h_icon">
+    <span></span>
+    <span></span>
     <span></span>
 </span>
-          -->
+</div>
