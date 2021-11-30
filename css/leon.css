@@ -16,7 +16,7 @@ body {
 }
 */
 
-.h_containter {
+.containter {
     width: 600px;
     margin: auto;
     padding-left: 15px;
@@ -59,11 +59,11 @@ body {
 .header .logo {
     width: 60px;
 }
-
+/*links styling*/
 .header .links {
     position: relative;
 }
-
+/*link icon design*/
 .header .links:hover .icon span:nth-child(2){
     width: 100%;
 
@@ -93,6 +93,20 @@ body {
 .header .links .icon span:last-child {
     width: 100%;
 }
-
+/*end of link icon design*/
+/*links list */
+.header .links ul{
+    list-style: none;
+    display: none;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+}
+.header .links:hover ul{
+    display: block;
+}
+/*end of links list */
+/*links styling*/
 
 /*End of Start Header*/
