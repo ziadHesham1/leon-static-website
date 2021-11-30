@@ -24,21 +24,21 @@ body {
 
 /*Small*/
 @media (min-width: 768px) {
-    .h_containter {
+    .containter {
         width: 750px;
     }
 }
 
 /*Medium*/
 @media (min-width: 992px) {
-    .h_containter {
+    .containter {
         width: 970px;
     }
 }
 
 /*Large*/
 @media (min-width: 1200px) {
-    .h_containter {
+    .containter {
         width: 1170px;
     }
 }
@@ -50,39 +50,49 @@ body {
     padding: 20px;
 }
 
-.header .h_containter {
+.header .containter {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.header .h_logo {
+.header .logo {
     width: 60px;
 }
 
-.header .h_links {
+.header .links {
     position: relative;
 }
 
-.header .h_links .h_icon {
+.header .links:hover .icon span:nth-child(2){
+    width: 100%;
+
+}
+.header .links .icon {
     width: 30px;
     display: flex;
     flex-wrap: wrap;
-    flex-direction:column ;
     justify-content: flex-end;
 }
-.header .h_links .h_icon span {
+
+.header .links .icon span {
     background-color: #333;
     margin-bottom: 5px;
     height: 3px;
 
 }
-
-.header .h_links .h_icon span :first-child {
-    width: 60%;
-
+.header .links .icon span:first-child {
+    width: 100%;
 }
 
+.header .links .icon span:nth-child(2){
+    width: 60%;
+    transition: 0.3s ;
+}
+
+.header .links .icon span:last-child {
+    width: 100%;
+}
 
 
 /*End of Start Header*/
