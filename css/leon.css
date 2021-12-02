@@ -9,6 +9,7 @@ body {
     font-family: "work sans", sans-serif;
 
 }
+
 /*
 
 .parent {
@@ -20,6 +21,7 @@ body {
     width: 600px;
     margin: auto;
     padding-left: 15px;
+    /*background-color: blue;*/
 }
 
 /*Small*/
@@ -59,15 +61,20 @@ body {
 .header .logo {
     width: 60px;
 }
+
 /*links styling*/
 .header .links {
     position: relative;
 }
+
 /*link icon design*/
-.header .links:hover .icon span:nth-child(2){
+/*hover to animate icon*/
+.header .links:hover .icon span:nth-child(2) {
     width: 100%;
 
 }
+
+/*end of hover to animate icon*/
 .header .links .icon {
     width: 30px;
     display: flex;
@@ -81,31 +88,68 @@ body {
     height: 3px;
 
 }
+
 .header .links .icon span:first-child {
     width: 100%;
 }
 
-.header .links .icon span:nth-child(2){
+.header .links .icon span:nth-child(2) {
     width: 60%;
-    transition: 0.3s ;
+    transition: 0.3s;
 }
 
 .header .links .icon span:last-child {
     width: 100%;
 }
+
 /*end of link icon design*/
+
 /*links list */
-.header .links ul{
+/*بيظبط شكلها مع الicon عشان تبان نازله منها وتخفيها*/
+.header .links ul {
     list-style: none;
     display: none;
     right: 0;
     margin: 0;
     padding: 0;
     position: absolute;
+    background-color: #F6F6F6;
+    min-width: 200px;
+    top: calc(100% + 15px);
 }
-.header .links:hover ul{
+/* غشان لما اعدي علي ال icon يطلع الlist*/
+.header .links:hover ul {
     display: block;
 }
+/*links list arrow*/
+.header .links ul::before {
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #F6F6F6 transparent;
+    position: absolute;
+    right: 5px;
+    top: -20px;
+}
+
+/*end oflinks list arrow*/
+/*عشان يشيل الخطوط والالوان بتاكت الlink */
+.header .links ul li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #333;
+    transition: 0.3s;
+}
+/*عشان كل ما عدي علي li يطلع برا سيكا*/
+.header .links ul li a:hover {
+    padding-left: 25px;
+}
+/*عشان يبقي بان ان في مسافه بين كل li*/
+.header .links ul li:not(:last-child) a {
+    border-bottom: 1px solid #ddd;
+}
+
 /*end of links list */
 /*links styling*/
 
