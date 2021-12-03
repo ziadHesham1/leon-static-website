@@ -1,3 +1,9 @@
+/*start variables*/
+:root{
+    --main-color: #10cab7;
+}
+/*end variables*/
+
 /*Global Rules*/
 * {
     box-sizing: border-box;
@@ -50,6 +56,7 @@ body {
 /*Start Header*/
 .header {
     padding: 20px;
+
 }
 
 .header .containter {
@@ -69,10 +76,6 @@ body {
 
 /*link icon design*/
 /*hover to animate icon*/
-.header .links:hover .icon span:nth-child(2) {
-    width: 100%;
-
-}
 
 /*end of hover to animate icon*/
 .header .links .icon {
@@ -102,6 +105,11 @@ body {
     width: 100%;
 }
 
+.header .links:hover .icon span:nth-child(2) {
+    width: 100%;
+
+}
+
 /*end of link icon design*/
 
 /*links list */
@@ -117,10 +125,12 @@ body {
     min-width: 200px;
     top: calc(100% + 15px);
 }
-/* غشان لما اعدي علي ال icon يطلع الlist*/
+
+/* عشان لما اعدي علي ال icon يطلع الlist*/
 .header .links:hover ul {
     display: block;
 }
+
 /*links list arrow*/
 .header .links ul::before {
     content: "";
@@ -141,10 +151,12 @@ body {
     color: #333;
     transition: 0.3s;
 }
+
 /*عشان كل ما عدي علي li يطلع برا سيكا*/
 .header .links ul li a:hover {
     padding-left: 25px;
 }
+
 /*عشان يبقي بان ان في مسافه بين كل li*/
 .header .links ul li:not(:last-child) a {
     border-bottom: 1px solid #ddd;
@@ -152,5 +164,37 @@ body {
 
 /*end of links list */
 /*links styling*/
+/*End of Header
+conclusion: (height = 64px width is changable )*/
 
-/*End of Start Header*/
+/*start Landing Section*/
+.landing {
+    background-image: url("../images/mountain.png");
+    background-size: cover;
+    height: calc(100vh - 64px);
+    position: relative;
+}
+
+.landing .intro-text {
+     position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+        width: 320px;
+    max-width: 100%;
+    z-index: 1;
+}
+
+.landing .intro-text h1 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 50px;
+    color: var(--main-color);
+
+
+}
+
+.landing .intro-text p {
+}
+
+/*end Landing Section*/
