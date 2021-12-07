@@ -1,7 +1,12 @@
 /*start variables*/
-:root{
+:root {
     --main-color: #10cab7;
+    --background-color: #F6F6F6;
+    --paragragh-color:#777;
+    --paragraph-font-size:18px;
+    --paragraph-line-height:1.8;
 }
+
 /*end variables*/
 
 /*Global Rules*/
@@ -121,9 +126,11 @@ body {
     margin: 0;
     padding: 0;
     position: absolute;
-    background-color: #F6F6F6;
+    background-color: var(--background-color);
     min-width: 200px;
     top: calc(100% + 15px);
+        z-index: 1;
+
 }
 
 /* عشان لما اعدي علي ال icon يطلع الlist*/
@@ -136,7 +143,7 @@ body {
     content: "";
     border-width: 10px;
     border-style: solid;
-    border-color: transparent transparent #F6F6F6 transparent;
+    border-color: transparent transparent var(--background-color) transparent;
     position: absolute;
     right: 5px;
     top: -20px;
@@ -176,13 +183,12 @@ conclusion: (height = 64px width is changable )*/
 }
 
 .landing .intro-text {
-     position: absolute;
+    position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
-        width: 320px;
+    transform: translate(-50%, -50%);
+    width: 320px;
     max-width: 100%;
-    z-index: 1;
 }
 
 .landing .intro-text h1 {
@@ -195,6 +201,40 @@ conclusion: (height = 64px width is changable )*/
 }
 
 .landing .intro-text p {
+    font-size: var(--paragraph-font-size);
+    line-height: var(--paragraph-line-height);
 }
 
 /*end Landing Section*/
+
+/*start features section*/
+.features {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: var(--background-color);
+}
+
+.features .container {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.features .feat {
+    padding: 20px;
+    text-align: center;
+}
+
+.features .feat h3 {
+    font-weight: 800;
+    margin: 30px 0;
+}
+
+.features .feat p {
+    line-height: var(--paragraph-line-height);
+    color: var(--paragragh-color);
+    font-size: var(--paragraph-font-size);
+}
+
+/*end features section*/
