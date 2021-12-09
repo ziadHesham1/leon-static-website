@@ -283,6 +283,22 @@ conclusion: (height = 64px width is changable )*/
     gap: 30px;
 
 }
+.services .services-content .service{
+    display: flex;
+    margin-bottom: 40px;
+}
+@media (max-width: 767px) {
+    .services .services-content .service{
+        flex-direction: column;
+        text-align: center;
+
+    }
+
+}
+.services .services-content .service img{
+    flex-basis: 60px;
+}
+
 
 
 /*End Services section*/
