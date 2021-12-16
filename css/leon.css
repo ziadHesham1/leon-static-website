@@ -9,12 +9,13 @@
     --paragraph-font-size: 18px;
     --paragraph-line-height: 1.8;
     --special-headingP-color: #797979;
+    --secondary-color: #2c4755;
 }
 
 /*end variables*/
 /*Start Components*/
 .special-heading {
-    color: var( --special-heading-color);
+    color: var(--special-heading-color);
     font-size: 100px;
     text-align: center;
     font-weight: 800;
@@ -250,7 +251,7 @@ conclusion: (height = 64px width is changable )*/
 .features .container {
 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
 }
 
@@ -274,31 +275,76 @@ conclusion: (height = 64px width is changable )*/
 
 /*Start Services section*/
 .services {
-    margin: 60px 0;
+    padding: 60px 0;
 }
 
 .services .services-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 30px;
+    margin-top: 100px;
 
 }
-.services .services-content .service{
+
+.services .services-content .srv {
     display: flex;
     margin-bottom: 40px;
+
 }
+
 @media (max-width: 767px) {
-    .services .services-content .service{
+    .services .services-content .srv {
         flex-direction: column;
         text-align: center;
 
     }
-
 }
-.services .services-content .service img{
+
+.services .services-content .srv i {
+    color: var(--main-color);
     flex-basis: 60px;
 }
 
+.services .services-content .srv .text {
+    flex: 1;
+}
 
+.services .services-content .srv .text h2 {
+    margin-top: 0;
+}
+
+.services .services-content .srv .text p {
+    color: var(--paragragh-color);
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.services .services-content .image {
+    position: relative;
+    text-align: center;
+
+}
+
+.services .services-content .image img {
+    width: 260px;
+}
+
+. .services-content .image::before {
+    content: "";
+    width: 100px;
+    position: absolute;
+    height: calc(100% + 100px);
+    background-color: var(--secondary-color);
+    top: -50px;
+    right: 0;
+    /*3shan yrg3 wara elsora*/
+    z-index: -1;
+}
+/*1200 awl 7aga felshashat elkbera f3mltha 1199*/
+@media (max-width: 1199px) {
+    .image-col {
+        display: none;
+    }
+}
 
 /*End Services section*/
