@@ -4,17 +4,22 @@
     /*--background-color: #F6F6F6;*/ /*3shan ellon da msh bayn felshasha elso8yara*/
     --background-color: #d1d0d2;
     /*special-heading-color:#ebeced;*/ /*3shan ellon da msh bayn felshasha elso8yara*/
-    --special-heading-color: #d1d0d2;
+    --special-heading-color: #ebeced;
     --paragragh-color: #777;
     --paragraph-font-size: 18px;
     --paragraph-line-height: 1.8;
     --special-headingP-color: #797979;
     --secondary-color: #2c4755;
+    --section-padding: 60px;
 }
 
 /*end variables*/
 /*Start Components*/
-.special-heading {
+.special-containter {
+    margin-bottom: 100px;
+}
+
+.special-containter .special-heading {
     color: var(--special-heading-color);
     font-size: 100px;
     text-align: center;
@@ -23,7 +28,7 @@
 
 }
 
-.special-heading + p {
+.special-containter .special-heading + p {
     margin: -30px 0 0;
     text-align: center;
     font-size: 20px;
@@ -243,8 +248,7 @@ conclusion: (height = 64px width is changable )*/
 
 /*start features section*/
 .features {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: var(--section-padding) 0;
     background-color: var(--background-color);
 }
 
@@ -275,14 +279,13 @@ conclusion: (height = 64px width is changable )*/
 
 /*Start Services section*/
 .services {
-    padding: 60px 0;
+    padding: var(--section-padding) 0;
 }
 
 .services .services-content {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 30px;
-    margin-top: 100px;
 
 }
 
@@ -329,7 +332,7 @@ conclusion: (height = 64px width is changable )*/
     width: 260px;
 }
 
-. .services-content .image::before {
+.services .services-content .image::before {
     content: "";
     width: 100px;
     position: absolute;
@@ -340,6 +343,7 @@ conclusion: (height = 64px width is changable )*/
     /*3shan yrg3 wara elsora*/
     z-index: -1;
 }
+
 /*1200 awl 7aga felshashat elkbera f3mltha 1199*/
 @media (max-width: 1199px) {
     .image-col {
@@ -348,3 +352,34 @@ conclusion: (height = 64px width is changable )*/
 }
 
 /*End Services section*/
+
+
+/*start portfolio section*/
+.portfolio {
+    background-color: var(--background-color);
+    padding: var(--section-padding) 0;
+}
+
+.portfolio .portfolio-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 30px;
+}
+.portfolio .portfolio-content .info{
+    padding:20px;
+}
+.portfolio .portfolio-content .info h3{
+    margin:0;
+}
+.portfolio .portfolio-content .info p{
+    color:var(--paragragh-color);
+    line-height: var(--paragraph-line-height);
+    margin-bottom: 0;
+}
+
+.portfolio .portfolio-content .card img {
+    max-width: 100%;
+
+}
+
+/*end portfolio section*/
