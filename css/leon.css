@@ -509,18 +509,20 @@ conclusion: (height = 64px width is changable )*/
     color: var(--secondary-color);
 }
 
-/*
-
-
-    contact .contact-content .mail p {
-
-        color: var(--secondary-color);
-    }
-
-    .contact .contact-content .mail a {
-        color: var(--main-color);
-    }
-
-
-    */
 /*end contact section*/
+
+
+/*start footer section*/
+.footer{
+    background:var(--secondary-color);
+    text-align: center;
+        padding: 30px 10px;
+
+        font-size: 18px;
+color: white;
+}
+.footer span{
+    color: var(--main-color);
+    font-weight: bold;
+}
+/*end footer section*/
