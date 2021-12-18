@@ -1,10 +1,12 @@
 /*start variables*/
 :root {
     --main-color: #10cab7;
-    /*--background-color: #F6F6F6;*/ /*3shan ellon da msh bayn felshasha elso8yara*/
+    /*3shan ellon da msh bayn felshasha elso8yara*/
+    /*--background-color: #f6f6f6;*/
     --background-color: #d1d0d2;
-    /*special-heading-color:#ebeced;*/ /*3shan ellon da msh bayn felshasha elso8yara*/
-    --special-heading-color: #ebeced;
+     /*3shan ellon da msh bayn felshasha elso8yara*/
+    /*--special-heading-color: #ebeced;*/
+    --special-heading-color: #dddae0;
     --paragragh-color: #777;
     --paragraph-font-size: 18px;
     --paragraph-line-height: 1.8;
@@ -37,19 +39,35 @@
 
 }
 
+.grid-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 30px;
+}
+
+.section {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+.background{
+        background-color: var(--background-color);
+
+}
 @media (max-width: 767px) {
-    .special-heading {
+    .special-containter .special-heading {
         font-size: 60px;
     }
 
-    .special-heading + p {
+    .special-containter .special-heading + p {
         margin-top: -20px;
     }
-
 }
 
-/*End Components*/
+/*@media (max-width: 767px) {
 
+
+}*/
+/*End Components*/
 /*Global Rules*/
 * {
     box-sizing: border-box;
@@ -100,7 +118,6 @@ body {
 }
 
 /*End of Global Rules*/
-
 /*Start Header*/
 .header {
     padding: 20px;
@@ -124,7 +141,6 @@ body {
 
 /*link icon design*/
 /*hover to animate icon*/
-
 /*end of hover to animate icon*/
 .header .links .icon {
     width: 30px;
@@ -159,7 +175,6 @@ body {
 }
 
 /*end of link icon design*/
-
 /*links list */
 /*بيظبط شكلها مع الicon عشان تبان نازله منها وتخفيها*/
 .header .links ul {
@@ -216,7 +231,6 @@ body {
 /*links styling*/
 /*End of Header
 conclusion: (height = 64px width is changable )*/
-
 /*start Landing Section*/
 .landing {
     background-image: url("../images/mountain.png");
@@ -249,19 +263,8 @@ conclusion: (height = 64px width is changable )*/
 }
 
 /*end Landing Section*/
-
 /*start features section*/
-.features {
-    padding-top: var(--section-padding) 0;
-    background-color: var(--background-color);
-}
 
-.features .container {
-
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-}
 
 .features .feat {
     padding: 20px;
@@ -274,24 +277,14 @@ conclusion: (height = 64px width is changable )*/
 }
 
 .features .feat p {
-    line-height: var(--paragraph-line-height);
     color: var(--paragragh-color);
+    line-height: var(--paragraph-line-height);
     font-size: var(--paragraph-font-size);
 }
 
 /*end features section*/
-
 /*Start Services section*/
-.services {
-    padding: var(--section-padding) 0;
-}
 
-.services .services-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-gap: 30px;
-
-}
 
 .services .services-content .srv {
     display: flex;
@@ -356,19 +349,8 @@ conclusion: (height = 64px width is changable )*/
 }
 
 /*End Services section*/
-
-
 /*start portfolio section*/
-.portfolio {
-    background-color: var(--background-color);
-    padding: var(--section-padding) 0;
-}
 
-.portfolio .portfolio-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-gap: 30px;
-}
 
 .portfolio .portfolio-content .info {
     padding: 20px;
@@ -392,7 +374,6 @@ conclusion: (height = 64px width is changable )*/
 /*end portfolio section*/
 /*start about section*/
 .about {
-    padding-top: var(--section-padding);
     padding-bottom: calc(var(--section-padding) + 60px);
 }
 
@@ -422,7 +403,7 @@ conclusion: (height = 64px width is changable )*/
 }
 
 @media (max-width: 991px) {
-    .about .about-content img {
+    .about .about-content .image {
         margin: 0 auto 60px;
     }
 }
@@ -457,7 +438,6 @@ conclusion: (height = 64px width is changable )*/
     }
 }
 
-
 .about .about-content .text {
     line-height: 2;
     flex-basis: calc(100% - 500px);
@@ -480,4 +460,67 @@ conclusion: (height = 64px width is changable )*/
     color: var(--paragragh-color);
 
 }
+
 /*end about section*/
+
+
+/*start contact section*/
+.contact{
+
+}
+.contact .contact-content {
+    text-align: center;
+}
+
+.contact .contact-content .mail {
+    font-weight: 800;
+    font-size: 35px;
+}
+
+@media (max-width: 767px) {
+    .contact .contact-content .mail {
+        font-size: 25px;
+
+    }
+}
+
+.contact .contact-content .label {
+    color: var(--secondary-color);
+    letter-spacing: -2px;
+
+}
+
+.contact .contact-content .link {
+    color: var(--main-color);
+    text-decoration: none;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}
+.contact .contact-content .social{
+        display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 16px;
+
+}
+.contact .contact-content .social i{
+    margin-left: 10px;
+    color: var(--secondary-color);
+}
+
+/*
+
+
+    contact .contact-content .mail p {
+
+        color: var(--secondary-color);
+    }
+
+    .contact .contact-content .mail a {
+        color: var(--main-color);
+    }
+
+
+    */
+/*end contact section*/
