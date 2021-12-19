@@ -2,11 +2,11 @@
 :root {
     --main-color: #10cab7;
     /*3shan ellon da msh bayn felshasha elso8yara*/
-    /*--background-color: #f6f6f6;*/
-    --background-color: #d1d0d2;
+    --background-color: #f6f6f6;
+    /*--background-color: #d1d0d2;*/
      /*3shan ellon da msh bayn felshasha elso8yara*/
-    /*--special-heading-color: #ebeced;*/
-    --special-heading-color: #dddae0;
+    --special-heading-color: #ebeced;
+    /*--special-heading-color: #dddae0;*/
     --paragragh-color: #777;
     --paragraph-font-size: 18px;
     --paragraph-line-height: 1.8;
@@ -465,9 +465,7 @@ conclusion: (height = 64px width is changable )*/
 
 
 /*start contact section*/
-.contact{
 
-}
 .contact .contact-content {
     text-align: center;
 }
